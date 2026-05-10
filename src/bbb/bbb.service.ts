@@ -1,15 +1,19 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateBbbDto } from './dto/create-bbb.dto';
 import { UpdateBbbDto } from './dto/update-bbb.dto';
+import { AaaService } from 'src/aaa/aaa.service';
 
 @Injectable()
 export class BbbService {
+  @Inject(AaaService)
+  private readonly aaaService: AaaService;
+
   create(createBbbDto: CreateBbbDto) {
     return 'This action adds a new bbb';
   }
 
   findAll() {
-    return `This action returns all bbb`;
+    return `This action returns all bbb` + this.aaaService.findAll();
   }
 
   findOne(id: number) {
