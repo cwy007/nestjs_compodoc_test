@@ -18,7 +18,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "compodoc:build": "compodoc -p tsconfig.json -d documentation",
+    "compodoc:build": "rm -rf documentation && compodoc -p tsconfig.json -d documentation",
     "compodoc:serve": "compodoc -s -d documentation"
   },
   "dependencies": {

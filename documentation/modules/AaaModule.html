@@ -104,7 +104,7 @@
 
 <ol class="breadcrumb">
     <li class="breadcrumb-item">Modules</li>
-    <li class="breadcrumb-item" >AppModule</li>
+    <li class="breadcrumb-item" >AaaModule</li>
 </ol>
 
 <div class="text-center module-graph-container">
@@ -132,58 +132,30 @@
 <polygon fill="#fb8072" stroke="transparent" points="406,-10 406,-30 426,-30 426,-10 406,-10"/>
 <text text-anchor="start" x="429.73" y="-15.4" font-family="Times-12" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
-<title>cluster_AppModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="72,-70 72,-195 424,-195 424,-70 72,-70"/>
-</g>
-<g id="clust3" class="cluster">
-<title>cluster_AppModule_imports</title>
-<polygon fill="none" stroke="black" points="218,-78 218,-130 416,-130 416,-78 218,-78"/>
+<title>cluster_AaaModule</title>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="176,-70 176,-195 320,-195 320,-70 176,-70"/>
 </g>
 <g id="clust6" class="cluster">
-<title>cluster_AppModule_providers</title>
-<polygon fill="none" stroke="black" points="80,-78 80,-130 210,-130 210,-78 80,-78"/>
+<title>cluster_AaaModule_providers</title>
+<polygon fill="none" stroke="black" points="184,-78 184,-130 312,-130 312,-78 184,-78"/>
+</g>
+<!-- AaaService -->
+<g id="node1" class="node">
+<title>AaaService</title>
+<ellipse fill="#fdb462" stroke="black" cx="248" cy="-104" rx="55.57" ry="18"/>
+<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">AaaService</text>
 </g>
 <!-- AaaModule -->
-<g id="node1" class="node">
-<title>AaaModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="408.09,-122 405.09,-126 384.09,-126 381.09,-122 325.91,-122 325.91,-86 408.09,-86 408.09,-122"/>
-<text text-anchor="middle" x="367" y="-99.8" font-family="Times,serif" font-size="14.00">AaaModule</text>
-</g>
-<!-- AppModule -->
-<g id="node3" class="node">
-<title>AppModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="308.66,-187 305.66,-191 284.66,-191 281.66,-187 225.34,-187 225.34,-151 308.66,-151 308.66,-187"/>
-<text text-anchor="middle" x="267" y="-164.8" font-family="Times,serif" font-size="14.00">AppModule</text>
-</g>
-<!-- AaaModule&#45;&gt;AppModule -->
-<g id="edge1" class="edge">
-<title>AaaModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M367,-122.11C367,-141.34 367,-169 367,-169 367,-169 318.83,-169 318.83,-169"/>
-<polygon fill="black" stroke="black" points="318.83,-165.5 308.83,-169 318.83,-172.5 318.83,-165.5"/>
-</g>
-<!-- BbbModule -->
 <g id="node2" class="node">
-<title>BbbModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="308.39,-122 305.39,-126 284.39,-126 281.39,-122 225.61,-122 225.61,-86 308.39,-86 308.39,-122"/>
-<text text-anchor="middle" x="267" y="-99.8" font-family="Times,serif" font-size="14.00">BbbModule</text>
+<title>AaaModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="289.09,-187 286.09,-191 265.09,-191 262.09,-187 206.91,-187 206.91,-151 289.09,-151 289.09,-187"/>
+<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">AaaModule</text>
 </g>
-<!-- BbbModule&#45;&gt;AppModule -->
-<g id="edge2" class="edge">
-<title>BbbModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M267,-122.11C267,-122.11 267,-140.99 267,-140.99"/>
-<polygon fill="black" stroke="black" points="263.5,-140.99 267,-150.99 270.5,-140.99 263.5,-140.99"/>
-</g>
-<!-- AppService -->
-<g id="node4" class="node">
-<title>AppService</title>
-<ellipse fill="#fdb462" stroke="black" cx="145" cy="-104" rx="56.74" ry="18"/>
-<text text-anchor="middle" x="145" y="-99.8" font-family="Times,serif" font-size="14.00">AppService</text>
-</g>
-<!-- AppService&#45;&gt;AppModule -->
-<g id="edge3" class="edge">
-<title>AppService&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M145,-122.11C145,-141.34 145,-169 145,-169 145,-169 215.01,-169 215.01,-169"/>
-<polygon fill="black" stroke="black" points="215.01,-172.5 225.01,-169 215.01,-165.5 215.01,-172.5"/>
+<!-- AaaService&#45;&gt;AaaModule -->
+<g id="edge1" class="edge">
+<title>AaaService&#45;&gt;AaaModule</title>
+<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
+<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
 </g>
 </g>
 </svg>
@@ -221,7 +193,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app.module.ts</code>
+            <code>src/aaa/aaa.module.ts</code>
         </p>
 
 
@@ -235,7 +207,7 @@
                             title="Official documentation about module providers"><span class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../injectables/AppService.html">AppService</a>
+                            <a href="../injectables/AaaService.html">AaaService</a>
                         </li>
                     </ul>
                 </div>
@@ -245,20 +217,7 @@
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../controllers/AppController.html">AppController</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" rel="noopener noreferrer"
-                            title="Official documentation about module imports"><span
-                                class="icon ion-ios-information-circle-outline"></a></h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="../modules/AaaModule.html">AaaModule</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../modules/BbbModule.html">BbbModule</a>
+                            <a href="../controllers/AaaController.html">AaaController</a>
                         </li>
                     </ul>
                 </div>
@@ -271,17 +230,14 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Module } from &#x27;@nestjs/common&#x27;;
-import { AppController } from &#x27;./app.controller&#x27;;
-import { AppService } from &#x27;./app.service&#x27;;
-import { AaaModule } from &#x27;./aaa/aaa.module&#x27;;
-import { BbbModule } from &#x27;./bbb/bbb.module&#x27;;
+import { AaaService } from &#x27;./aaa.service&#x27;;
+import { AaaController } from &#x27;./aaa.controller&#x27;;
 
 @Module({
-  imports: [AaaModule, BbbModule],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AaaController],
+  providers: [AaaService],
 })
-export class AppModule {}
+export class AaaModule {}
 </code></pre>
     </div>
 </div>
@@ -328,7 +284,7 @@ export class AppModule {}
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AaaModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
