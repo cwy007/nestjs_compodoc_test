@@ -9,6 +9,7 @@ import { authPlugins } from 'mysql2';
 import { User } from './user/entities/user.entity';
 import { EmailModule } from './email/email.module';
 import { ConfigModule } from '@nestjs/config';
+import { RedisModule } from './redis/redis.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { ConfigModule } from '@nestjs/config';
     BbbModule,
     UserModule,
     EmailModule,
+    RedisModule,
   ],
   controllers: [AppController],
   providers: [AppService],
