@@ -18,15 +18,17 @@ export class EmailController {
 
   @Get('code')
   async sendEmailCode(@Query('address') address: string) {
+    const code = Math.floor(Math.random() * 900000 + 100000);
     await this.emailService.sendEmail(
       address,
       '验证码邮件',
-      `<p>您的验证码是：<b>${Math.floor(Math.random() * 900000 + 100000)}</b>，有效期5分钟，请勿泄露给他人！</p>`,
+      `<p>您的验证码是：<b>${code}</b>，有效期5分钟，请勿泄露给他人！</p>`,
     );
 
     console.log(`验证码已发送到${address}，请注意查收！`);
     return {
       message: '验证码已发送，请注意查收！',
+      code,
     };
   }
 
