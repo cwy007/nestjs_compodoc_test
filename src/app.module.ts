@@ -8,6 +8,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { authPlugins } from 'mysql2';
 import { User } from './user/entities/user.entity';
 import { EmailModule } from './email/email.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -28,6 +29,10 @@ import { EmailModule } from './email/email.module';
           sha256_password: authPlugins.sha256_password,
         }
       }
+    }),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: 'src/.env',
     }),
     AaaModule,
     BbbModule,

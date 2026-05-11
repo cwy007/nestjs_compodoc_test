@@ -1,11 +1,34 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Query,
+} from '@nestjs/common';
 import { EmailService } from './email.service';
 import { CreateEmailDto } from './dto/create-email.dto';
 import { UpdateEmailDto } from './dto/update-email.dto';
 
 @Controller('email')
 export class EmailController {
-  constructor(private readonly emailService: EmailService) {}
+  constructor(private readonly emailService: EmailService) { }
+
+  @Get('code')
+  async sendEmailCode(@Query('address') address: string) {
+    await this.emailService.sendEmail(
+      address,
+      '验证码邮件',
+      `<p>您的验证码是：<b>${Math.floor(Math.random() * 900000 + 100000)}</b>，有效期5分钟，请勿泄露给他人！</p>`,
+    );
+
+    console.log(`验证码已发送到${address}，请注意查收！`);
+    return {
+      message: '验证码已发送，请注意查收！',
+    };
+  }
 
   @Post()
   create(@Body() createEmailDto: CreateEmailDto) {
