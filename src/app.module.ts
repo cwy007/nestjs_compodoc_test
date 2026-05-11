@@ -33,7 +33,7 @@ import { RedisModule } from './redis/redis.module';
     }),
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: 'src/.env',
+      envFilePath: `${process.cwd()}/.env`,
     }),
     AaaModule,
     BbbModule,
