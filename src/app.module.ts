@@ -7,6 +7,7 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { authPlugins } from 'mysql2';
 import { User } from './user/entities/user.entity';
+import { EmailModule } from './email/email.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { User } from './user/entities/user.entity';
     AaaModule,
     BbbModule,
     UserModule,
+    EmailModule,
   ],
   controllers: [AppController],
   providers: [AppService],
