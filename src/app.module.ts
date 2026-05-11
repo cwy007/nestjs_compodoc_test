@@ -6,6 +6,7 @@ import { BbbModule } from './bbb/bbb.module';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { authPlugins } from 'mysql2';
+import { User } from './user/entities/user.entity';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { authPlugins } from 'mysql2';
       username: 'root',
       password: 'Cwy17824',
       database: 'email_login_test',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      entities: [User],
       synchronize: true,
       logging: true,
       poolSize: 10,
