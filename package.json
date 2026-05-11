@@ -26,11 +26,14 @@
     "@nestjs/core": "^11.0.1",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/typeorm": "^11.0.1",
     "imap": "^0.8.19",
     "mailparser": "^3.9.8",
+    "mysql2": "^3.22.3",
     "nodemailer": "^8.0.7",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.29"
   },
   "devDependencies": {
     "@compodoc/compodoc": "^1.2.1",
