@@ -1,9 +1,24 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { LoginUserDto } from './dto/login-user.dto';
+import { InjectEntityManager } from '@nestjs/typeorm';
+import { EntityManager } from 'typeorm';
 
 @Injectable()
 export class UserService {
+
+  @InjectEntityManager()
+  private entityManager: EntityManager;
+
+  async login(loginUserDto: LoginUserDto) {
+    return 'This action logs in a user';
+  }
+
+  async findUserByEmail(email: string) {
+    return this.entityManager.findOne('User', { where: { email } });
+  }
+
   create(createUserDto: CreateUserDto) {
     return 'This action adds a new user';
   }

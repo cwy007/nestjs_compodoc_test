@@ -11,14 +11,21 @@ import {
 import { EmailService } from './email.service';
 import { CreateEmailDto } from './dto/create-email.dto';
 import { UpdateEmailDto } from './dto/update-email.dto';
+import { RedisService } from 'src/redis/redis.service';
 
 @Controller('email')
 export class EmailController {
-  constructor(private readonly emailService: EmailService) { }
+  constructor(
+    private readonly emailService: EmailService,
+    private readonly redisService: RedisService,
+  ) { }
 
   @Get('code')
   async sendEmailCode(@Query('address') address: string) {
     const code = Math.floor(Math.random() * 900000 + 100000);
+
+    await this.redisService.set(`captcha_${address}`, code, 5 * 60);
+
     await this.emailService.sendEmail(
       address,
       '验证码邮件',
